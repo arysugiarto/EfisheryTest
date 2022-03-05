@@ -15,4 +15,14 @@
         <item name="android:navigationBarColor">@color/white</item>
     </style>
 
+    <style name="TextInputLayout.Login.Form.Outlined.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/mercury</item>
+        <item name="boxStrokeWidth">@dimen/input_layout_stroke_width</item>
+        <item name="boxStrokeWidthFocused">@dimen/input_layout_stroke_width</item>
+        <item name="errorTextAppearance">@style/TextAppearance.Roboto.Regular.Caption</item>
+        <item name="hintTextAppearance">@style/TextAppearance.Roboto.Regular.Caption</item>
+        <item name="placeholderTextAppearance">@style/TextAppearance.Roboto.Black.Body2</item>
+        <item name="helperTextTextAppearance">@style/TextAppearance.Roboto.Regular.Caption</item>
+    </style>
+
 </resources>

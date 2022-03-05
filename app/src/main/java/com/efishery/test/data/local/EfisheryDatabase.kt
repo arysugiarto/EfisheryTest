@@ -10,7 +10,7 @@ import com.efishery.test.data.local.entity.Product
     version = 1,
     exportSchema = false
 )
-abstract class ParentingHubDatabase : RoomDatabase() {
+abstract class EfisheryDatabase : RoomDatabase() {
     abstract fun productDao(): ProductDao
 
     // Todo Add More Dao

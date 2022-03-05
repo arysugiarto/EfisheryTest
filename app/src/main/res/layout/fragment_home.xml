@@ -3,18 +3,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/zircon"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.home.HomeFragment">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/boxSearch"
+        style="@style/TextInputLayout.Login.Form.Outlined.Dense"
+        android:layout_width="@dimen/zero_margin"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:layout_marginBottom="@dimen/screen_margin"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+        app:boxStrokeColor="@drawable/bg_text_input_layout"
+        app:boxStrokeWidth="@dimen/_1sdp"
+        app:boxStrokeWidthFocused="1dp"
+        app:endIconDrawable="@drawable/ic_search"
+        app:endIconMode="custom"
+        app:endIconTint="@color/nobel"
+        app:expandedHintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderText="@string/search_hint"
+        app:placeholderTextColor="@color/mercury">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLength="255"
+            android:maxLines="1"
+            android:textColor="@color/dove_gray" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tvLogin"
+        android:id="@+id/variantFish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/variant_fish"
+        android:layout_marginTop="@dimen/screen_margin"
+        app:layout_constraintTop_toBottomOf="@id/boxSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/large_margin"
+        android:textColor="@color/jungle_green"
+        android:textAppearance="@style/TextAppearance.Nunito.Bold.Body1"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/available"
+        app:layout_constraintTop_toTopOf="@id/variantFish"
+        app:layout_constraintBottom_toBottomOf="@id/variantFish"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:textColor="@color/jungle_green"
+        android:textAppearance="@style/TextAppearance.Nunito.Bold.Body1"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/variantFish"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/screen_margin"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

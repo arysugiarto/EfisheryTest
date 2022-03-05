@@ -4,9 +4,9 @@ sealed class Result <T> {
     object Nothing: Result<kotlin.Nothing>()
     class Loading<T> : Result<T>()
     class Success<T>(val data: T?) : Result<T>()
-    class Error<T,X>(
+    class Error<T>(
         val message: String,
-        val data: X? = null,
+//        val data: X? = null,
         val status_code: Int = 0
     ): Result<T>()
 
@@ -14,10 +14,10 @@ sealed class Result <T> {
         val nothing = Nothing
         fun <T> loading() = Loading<T>()
         fun <T> success(data: T?) = Success(data)
-        fun <T,X> error(
+        fun <T> error(
             message: String,
-            data: X? = null,
+//            data: X? = null,
             code: Int = 0
-        ) = Error<T,X>(message, data)
+        ) = Error<T>(message)
     }
 }

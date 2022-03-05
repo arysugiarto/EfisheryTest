@@ -91,33 +91,31 @@ val Throwable.parsedMessage get() = handleException()
  * @return [Flow] of [Result] object with 3 Step of Result Handling
  * @param responseBody Used for [Response] callback value from ApiCallback
  */
-inline fun <T, X> flowResponse(crossinline responseBody: suspend () -> Response<BaseResponse<T, X>>) =
-    flow<Result<T>> {
-        val response = responseBody.invoke()
-        val body = response.body()
+inline fun <reified T> flowResponse(
+    handleError: Boolean = true,
+    crossinline errorMessage: (String) -> String = { emptyString },
+    crossinline responseBody: suspend () -> Response<T>
+) = flow<Result<T>> {
+    val response = responseBody.invoke()
+    val body= response.body()
 
-        if (response.isSuccessful) {
-            val result = body?.data
-            emit(Result.success(result))
-        } else {
-            val isError = response.code() in 400..599
-            val errorBody = response.errorBody()?.parse<BaseResponse<T, X>>()
-
-            val message =
-                if (isError) response.code().handleCode()
-                else errorBody?.message.orEmpty
-
-            emit(
-                Result.error(
-                    message = message,
-                    data = errorBody?.errors,
-                    code = response.code()
-                )
+    if(response.isSuccessful) {
+        emit(Result.success((body)))
+    } else {
+        emit(
+            Result.error(
+                message = "Error",
+//                data = "error",
+                code = response.code()
             )
-        }}
-        .onStart { emit(Result.loading()) }
-        .flowOn(Dispatchers.IO)
-        .catch { throwable ->
-            Timber.e(throwable)
-            emit(Result.error<T,X>(throwable.parsedMessage))
-        }
+        )
+    }}
+    .onStart { emit(Result.loading()) }
+    .flowOn(Dispatchers.IO)
+    .retryWhen { cause, attempt ->
+        attempt <= 3 && cause is SocketTimeoutException
+    }
+    .catch { throwable ->
+        Timber.e("Error @${T::class.java} : $throwable")
+        emit(Result.error<T>(throwable.parsedMessage, code = 500))
+    }

@@ -19,6 +19,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.ColorRes
@@ -28,6 +29,7 @@ import androidx.core.text.bold
 import androidx.core.text.buildSpannedString
 import androidx.core.text.color
 import androidx.core.view.doOnPreDraw
+import androidx.core.widget.addTextChangedListener
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool
@@ -46,6 +48,10 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
 import com.efishery.test.R
 import com.efishery.test.util.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import java.security.MessageDigest
 import kotlin.math.round
 
@@ -630,3 +636,20 @@ var TextInputLayout.textOrEmpty: CharSequence
                 }
             }
         }
+
+fun EditText.addDelayOnTypeWithScope(
+    delayMillis: Long = 0,
+    scope: CoroutineScope,
+    action: (String) -> Unit
+) {
+    var job: Job? = null
+
+    addTextChangedListener {
+        job?.cancel()
+
+        job = scope.launch {
+            delay(delayMillis)
+            action(it.toString())
+        }
+    }
+}

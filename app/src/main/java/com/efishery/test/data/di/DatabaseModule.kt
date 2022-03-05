@@ -2,7 +2,7 @@ package com.efishery.test.data.di
 
 import android.content.Context
 import androidx.room.Room
-import com.efishery.test.data.local.ParentingHubDatabase
+import com.efishery.test.data.local.EfisheryDatabase
 import com.efishery.test.util.Const
 import dagger.Module
 import dagger.Provides
@@ -20,12 +20,12 @@ object DatabaseModule {
     fun provideDatabase(@ApplicationContext context: Context) =
             Room.databaseBuilder(
                 context,
-                ParentingHubDatabase::class.java,
+                EfisheryDatabase::class.java,
                 Const.Database.DATABASE_NAME).build()
 
     @Singleton
     @Provides
-    fun provideUserDao(database: ParentingHubDatabase) = database.productDao()
+    fun provideUserDao(database: EfisheryDatabase) = database.productDao()
 
     // Todo : Inject Dao Here
 }

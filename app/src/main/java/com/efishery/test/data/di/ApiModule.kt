@@ -1,6 +1,6 @@
 package com.efishery.test.data.di
 
-import com.efishery.test.data.remote.api.ParentingHubApiCallback
+import com.efishery.test.data.remote.api.ApiCallback
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,6 +12,6 @@ import retrofit2.Retrofit
 object ApiModule {
 
     @Provides
-    fun provideDefaultApiCallback(retrofit: Retrofit): ParentingHubApiCallback =
-            retrofit.create(ParentingHubApiCallback::class.java)
+    fun provideDefaultApiCallback(retrofit: Retrofit): ApiCallback =
+            retrofit.create(ApiCallback::class.java)
 }

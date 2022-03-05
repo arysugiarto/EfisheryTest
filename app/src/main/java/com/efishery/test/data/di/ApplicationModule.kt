@@ -3,6 +3,9 @@ package com.efishery.test.data.di
 import android.app.Application
 import android.content.Context
 import com.efishery.test.data.local.preferences.AccessManager
+import com.efishery.test.data.remote.api.ApiCallback
+import com.efishery.test.data.repository.HomeRepository
+import com.efishery.test.data.source.data.HomeRemoteDataSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,6 +21,11 @@ object ApplicationModule {
     @Provides
     fun provideAccessManager(context: Context) = AccessManager(context)
 
-    // Todo : Add Repositories & Injectable Application Module here
+    @Provides
+    fun provideHomeRepository(
+        apiCallback: ApiCallback
+    ) = HomeRepository(
+        HomeRemoteDataSource(apiCallback)
+    )
 
 }

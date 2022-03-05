@@ -3,22 +3,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/loginFragment"
+    app:startDestination="@id/main_fragment"
     android:id="@+id/nav_main_graph">
 
     <!--Todo : Add Splash, Auth Fragment & Main Fragment As Home, Cart & Profile Navigation-->
 
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.efishery.test.ui.login.LoginFragment"
-        android:label="Login"
-        tools:layout="@layout/com_facebook_login_fragment">
-
-        <action
-            android:id="@+id/action_to_main"
-            app:destination="@id/main_fragment"/>
-
-    </fragment>
 
     <fragment
         android:id="@+id/main_fragment"

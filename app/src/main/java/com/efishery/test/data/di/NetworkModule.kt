@@ -20,10 +20,10 @@ import javax.inject.Singleton
 @InstallIn(ApplicationComponent::class)
 object NetworkModule {
 
-    const val PARENTINGHUB_ACCESS_KEY = "marketplace"
+    const val EFISHERY_ACCESS_KEY = "efihserytest"
 
     @Provides
-    @Named(PARENTINGHUB_ACCESS_KEY)
+    @Named(EFISHERY_ACCESS_KEY)
     fun provideBaseURL() = BuildConfig.BASE_URL
 
     @Provides
@@ -68,7 +68,7 @@ object NetworkModule {
     @Singleton
     fun provideRetrofit(
         okHttpClient: OkHttpClient,
-        @Named(PARENTINGHUB_ACCESS_KEY) baseURL: String
+        @Named(EFISHERY_ACCESS_KEY) baseURL: String
     ) = Retrofit.Builder()
         .baseUrl(baseURL)
         .addConverterFactory(GsonConverterFactory.create())

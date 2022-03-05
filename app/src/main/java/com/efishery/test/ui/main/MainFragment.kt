@@ -9,6 +9,7 @@ import com.efishery.test.databinding.FragmentMainBinding
 import com.efishery.test.util.BackButtonBehaviour
 import com.efishery.test.util.setupWithNavController
 import com.efishery.test.util.viewBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
@@ -23,7 +24,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         savedInstanceState?.let {
             bottomNavSelectedItemId = it.getInt(bottomNavSelectedItemIdKey, bottomNavSelectedItemId)
         }
-
         setUpBottomNavBar()
     }
 
@@ -33,7 +33,10 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     private fun setUpBottomNavBar() {
-        binding.bottomNavigation.selectedItemId = bottomNavSelectedItemId
+        binding.bottomNavigation.apply {
+            background = null
+            selectedItemId = bottomNavSelectedItemId
+        }
 
         // Todo : Change graph when declared graph not used
         val navGraphIds = listOf(
