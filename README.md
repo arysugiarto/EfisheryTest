@@ -43,4 +43,19 @@ Jika pada home salah satu jenis ikan di klik maka akan mengarah ke halaman detai
 <img align="left" src="ss/3.png" width="200" height="400">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+Untuk memesan ikan tersebut pengguna bisa klik button pesan sekarang yang ada di bawah <br>
+<img align="left" src="ss/4.png" width="200" height="400">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+Pengguna harus mengisi formulir pemesanan jika formulir sudah terisi pengguna bisa klik pesan pada button di bawah (harus scroll karena form banyak)<br>
+<img align="left" src="ss/5.png" width="200" height="400">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+untuk melihat pesanan pengguna bisa klik bottom navigations pesanan yang ada di bawah maka akan menuju halaman list pesanan <br>
+<img align="left" src="ss/6.png" width="200" height="400">
+
+
+
+
+
 
