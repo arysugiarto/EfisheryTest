@@ -9,6 +9,66 @@
         android:id="@+id/home_fragment"
         android:name="com.efishery.test.ui.home.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_fragment_to_detail_fragment"
+            app:destination="@id/detail_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_area_fragment"
+            app:destination="@id/area_fragment" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/area_fragment"
+        android:name="com.efishery.test.ui.area.ChooseAreaFragment"
+        android:label="Home"
+        tools:layout="@layout/layout_bottom_sheet_area">
+
+        <action
+            android:id="@+id/action_area_fragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/detail_fragment"
+        android:name="com.efishery.test.ui.home.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="nameFish"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="price"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="province"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="city"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="stock"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+
+    </fragment>
+
 
 </navigation>

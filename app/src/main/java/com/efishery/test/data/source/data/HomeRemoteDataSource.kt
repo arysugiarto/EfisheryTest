@@ -9,4 +9,6 @@ class HomeRemoteDataSource(callback: ApiCallback) {
 
 
     fun requestProduct() = flowResponse { apiCallback.requestProduct() }
+
+    fun requestArea() = flowResponse { apiCallback.requestArea() }
 }

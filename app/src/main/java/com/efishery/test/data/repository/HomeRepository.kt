@@ -10,4 +10,6 @@ class HomeRepository(
 
     override fun requestProduct() = remoteDataSource.requestProduct()
 
+    override fun requestArea() = remoteDataSource.requestArea()
+
 }

@@ -3,12 +3,16 @@ package com.efishery.test.ui.main
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.efishery.test.R
 import com.efishery.test.databinding.FragmentMainBinding
 import com.efishery.test.util.BackButtonBehaviour
 import com.efishery.test.util.setupWithNavController
 import com.efishery.test.util.viewBinding
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.bottomappbar.BottomAppBar
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 class MainFragment : Fragment(R.layout.fragment_main) {
@@ -58,5 +62,26 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             NavigationUI.setupWithNavController(binding.mainToolbar, navController)
             bottomNavSelectedItemId = navController.graph.id
         }
+    }
+
+    companion object {
+        val Fragment?.parentToolbar: MaterialToolbar?
+            get() {
+                val fragment = if (this?.parentFragment is NavHostFragment) {
+                    (parentFragment as? NavHostFragment)?.parentFragment as? MainFragment
+                } else null
+
+                return fragment?.binding?.mainToolbar
+            }
+
+        val Fragment?.parentNavigation: BottomNavigationView?
+            get() {
+                val fragment = if (this?.parentFragment is NavHostFragment) {
+                    (parentFragment as? NavHostFragment)?.parentFragment as? MainFragment
+                } else null
+
+                return fragment?.binding?.bottomNavigation
+            }
+
     }
 }

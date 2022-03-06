@@ -19,4 +19,10 @@
     <string name="variant_fish">Jenis ikan</string>
     <string name="price">Harga</string>
     <string name="available">Ketersediaan</string>
+    <string name="nama">Nama ikan</string>
+    <string name="label_area">Tersedia untuk area</string>
+    <string name="order">Pesan sekarang</string>
+    <string name="area">Area</string>
+    <string name="search_hint_area">Cari Kota</string>
+    <string name="login">Masuk</string>
 </resources>

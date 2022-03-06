@@ -1,8 +1,5 @@
 package com.efishery.test.util
 
-import android.provider.ContactsContract
-import android.provider.ContactsContract.CommonDataKinds.StructuredName.PREFIX
-
 object Const {
     object Network {
         const val PREFIX_GENERAL = "v1/general/"
@@ -10,11 +7,10 @@ object Const {
 
         object Home {
             const val PRODUCT = PREFIX + "storages/5e1edf521073e315924ceab4/list"
+            const val AREA = PREFIX + "storages/5e1edf521073e315924ceab4/option_area"
         }
 
     }
-
-
 
     object Access {
         const val AUTH_PREFIX = "Bearer"

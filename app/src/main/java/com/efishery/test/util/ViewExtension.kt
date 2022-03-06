@@ -30,6 +30,8 @@ import androidx.core.text.buildSpannedString
 import androidx.core.text.color
 import androidx.core.view.doOnPreDraw
 import androidx.core.widget.addTextChangedListener
+import androidx.lifecycle.LifecycleCoroutineScope
+import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool
@@ -652,4 +654,21 @@ fun EditText.addDelayOnTypeWithScope(
             action(it.toString())
         }
     }
+}
+
+fun ViewPager2.autoScroll(lifecycleScope: LifecycleCoroutineScope, interval: Long) {
+    lifecycleScope.launchWhenResumed {
+        scrollIndefinitely(interval)
+    }
+}
+
+private suspend fun ViewPager2.scrollIndefinitely(interval: Long) {
+    delay(interval)
+    val numberOfItems = adapter?.itemCount ?: 0
+    val lastIndex = if (numberOfItems > 0) numberOfItems - 1 else 0
+    val nextItem = if (currentItem == lastIndex) 0 else currentItem + 1
+
+    setCurrentItem(nextItem, true)
+
+    scrollIndefinitely(interval)
 }
