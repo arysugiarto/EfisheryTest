@@ -25,13 +25,13 @@ Instalasi lewat Apk <br>
 <br>
 
 Petunjuk penggunaan <br>
-<img align="left" src="ss/1.png" width="200" height="400"> <br>
+<img align="left" src="ss/1.png" width="200" height="400"> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Deskripsi <br>
 Terdapat dropdown ke bawah pada toolbar itu di tunjukan untuk ke halaman area
-<img align="left" src="ss/2.png" width="200" height="400"> <br>
+<img align="left" src="ss/2.png" width="200" height="400"> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Jika Item di klik pada halaman area misal jawa barat nantinya bakal muncul pada toolbar home<br>
 
 Jika pada home salah satu jenis ikan di klik maka akan mengarah ke halaman detail ikan
-<img align="left" src="ss/3.png" width="200" height="400"> <br>
+<img align="left" src="ss/3.png" width="200" height="400"> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
