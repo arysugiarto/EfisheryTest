@@ -20,6 +20,7 @@ Instalasi lewat project android studio <br>
 
 Instalasi lewat Apk <br>
 -Download apk lewat link berikut <br>
+https://drive.google.com/file/d/1ve67zViBXQJfKvRPrL6xk6S9wJjGeZwd/view?usp=sharing <br>
 -setelah terdownload pada device lakukan instalasi <br>
 -tunggu sampai selesai dan aplikasi siap digunakan
 
