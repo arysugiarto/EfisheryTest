@@ -3,6 +3,7 @@ Efishery Test Documentations
 Teknologi yang di pakai <br>
 -Kotlin <br>
 -MVVM Patern <br>
+-Retrofit<br>
 -DI Hilt dagger <br>
 -XMl MaterialsDesign menngunakan constraint layout <br>
 -Menggunakan Single Activity pada jetpack navigations component
