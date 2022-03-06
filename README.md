@@ -25,6 +25,6 @@ Instalasi lewat Apk <br>
 <br>
 
 Petunjuk penggunaan
-
+<img align="left" src="ss/1.png" width="200" height="350">
 
 
