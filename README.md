@@ -6,7 +6,7 @@ Teknologi yang di pakai <br>
 -Retrofit<br>
 -DI Hilt dagger <br>
 -XMl MaterialsDesign menngunakan constraint layout <br>
--Menggunakan Single Activity pada jetpack navigations component
+-Menggunakan Single Activity pada jetpack navigations component <br>
 -Room DB
 
 <br>
