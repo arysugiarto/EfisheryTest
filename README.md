@@ -68,12 +68,15 @@ menurut saya untuk fitur search dan tabulasi baiknya response API list ikan beri
 }
 
 <br>
-body json diatas memungkinkan untuk,  bisa mengirim param sesuai data yang ingin di cari atau di tampilkan<br>
+body json diatas memungkinkan untuk,  bisa mengirim param sesuai data yang ingin di cari atau di tampilkan,<br>
 mungkin ada cara lain namun yang terikirkan oleh saya mungkin cara seperti diatas
-<br>
+<br><br>
 
 untuk fitur tambah data, saya mengakalinya dengan input ke local data menggunakan Room DB,
 yang seolah-olah user memesan ke server, namun karena tidak ada API submit maka saya akali dengan Room DB
+
+<br><br>
+Senang mengerjakan test nya mari berdiskusi :)
 
 
 
