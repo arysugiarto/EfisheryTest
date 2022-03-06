@@ -102,12 +102,14 @@
 
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOrder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/order"
         app:icon="@drawable/ic_cart_outlined"
         app:iconGravity="textStart"
         android:textAllCaps="false"
+        android:padding="@dimen/normal_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginEnd="@dimen/screen_margin"
         android:layout_marginStart="@dimen/screen_margin"/>

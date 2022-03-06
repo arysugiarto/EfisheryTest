@@ -25,4 +25,17 @@
     <string name="area">Area</string>
     <string name="search_hint_area">Cari Kota</string>
     <string name="login">Masuk</string>
+    <string name="komoditas">Komoditas</string>
+    <string name="metode_serah_terima">Metode Serah terima</string>
+    <string name="rincian">Rincian pemesanan</string>
+    <string name="jumlah_pesanan">Jumlah pesanan (Kg)</string>
+    <string name="imput_kode_promo">Input kode promo</string>
+    <string name="kode_promo">Kode Promo</string>
+    <string name="name">Nama</string>
+    <string name="input_name">Nama lengkap</string>
+    <string name="hp">No. Hanphone</string>
+    <string name="domisili">Domisili</string>
+    <string name="informasi_penerima">Informasi Penerima</string>
+    <string name="title">Formulir Pemesanan</string>
+    <string name="pesan">Pesan</string>
 </resources>

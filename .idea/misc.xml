@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/drawable/bg_bottom_sheet.xml" value="0.203" />
+        <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/drawable/bg_input.xml" value="0.203" />
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/drawable/bg_text_input_layout.xml" value="0.203" />
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.203" />
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.203" />
@@ -12,12 +13,15 @@
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/drawable/indicator_selected.xml" value="0.203" />
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/drawable/indicator_slector.xml" value="0.203" />
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/layout/fragment_detail.xml" value="0.358695652173913" />
+        <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/layout/fragment_feed.xml" value="0.358695652173913" />
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/layout/fragment_home.xml" value="0.358695652173913" />
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/layout/fragment_login.xml" value="0.358695652173913" />
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/layout/item_area.xml" value="0.22" />
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/layout/item_banner_slider.xml" value="0.358695652173913" />
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/layout/item_product.xml" value="0.358695652173913" />
         <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/layout/layout_bottom_sheet.xml" value="0.358695652173913" />
+        <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/layout/layout_bottom_sheet_area.xml" value="0.36180904522613067" />
+        <entry key="..\:/android-dev/Testing/Efishery Test/app/src/main/res/layout/layout_bottom_sheet_order.xml" value="0.358695652173913" />
       </map>
     </option>
   </component>

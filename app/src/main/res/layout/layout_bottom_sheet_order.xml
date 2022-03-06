@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom_sheet">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/huge_margin">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/screen_margin"
+                android:text="@string/title"
+                android:textAppearance="@style/TextAppearance.Nunito.Bold.Body1"
+                android:textColor="@color/jungle_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitleKomoditas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="@string/komoditas"
+                android:textAppearance="@style/TextAppearance.Roboto.Bold.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/boxSearch"
+                style="@style/TextInputLayout.Login.Form.Outlined.Dense"
+                android:layout_width="@dimen/zero_margin"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:layout_marginBottom="@dimen/screen_margin"
+                app:boxBackgroundColor="@color/mercury"
+                app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                app:boxStrokeColor="@drawable/bg_text_input_layout"
+                app:boxStrokeWidth="@dimen/_1sdp"
+                app:boxStrokeWidthFocused="1dp"
+                app:endIconMode="custom"
+                app:endIconTint="@color/nobel"
+                app:expandedHintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleKomoditas"
+                app:placeholderTextAppearance="@style/TextAppearance.Nunito.Regular.Body2"
+                app:placeholderTextColor="@color/mercury">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLength="255"
+                    android:maxLines="1"
+                    android:textColor="@color/dove_gray" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvPickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:text="@string/metode_serah_terima"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boxSearch" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/screen_margin"
+                android:background="@drawable/bg_input"
+                android:padding="@dimen/medium_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPickup">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSortBy"
+                    android:layout_width="@dimen/zero_margin"
+                    android:layout_height="@dimen/zero_margin"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Caption"
+                    android:textColor="@color/dove_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/clSort"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/spinnerSort"
+                    android:layout_width="@dimen/zero_margin"
+                    android:layout_height="@dimen/_20sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvRincian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/screen_margin"
+                android:text="@string/rincian"
+                android:textAppearance="@style/TextAppearance.Roboto.Bold.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clSort" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvKg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/screen_margin"
+                android:text="@string/jumlah_pesanan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRincian" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/boxKg"
+                style="@style/TextInputLayout.Login.Form.Outlined.Dense"
+                android:layout_width="@dimen/zero_margin"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:layout_marginBottom="@dimen/screen_margin"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                app:boxStrokeColor="@drawable/bg_text_input_layout"
+                app:boxStrokeWidth="@dimen/_1sdp"
+                app:boxStrokeWidthFocused="1dp"
+                app:endIconMode="custom"
+                app:endIconTint="@color/nobel"
+                app:expandedHintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvKg"
+                app:placeholderText="0"
+                app:placeholderTextColor="@color/mercury">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etKg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLength="255"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvKode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/screen_margin"
+                android:text="@string/kode_promo"
+                android:textAppearance="@style/TextAppearance.Roboto.Bold.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boxKg" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvKodePromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/screen_margin"
+                android:text="@string/jumlah_pesanan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKode" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/kodePromo"
+                style="@style/TextInputLayout.Login.Form.Outlined.Dense"
+                android:layout_width="@dimen/zero_margin"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:layout_marginBottom="@dimen/screen_margin"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                app:boxStrokeColor="@drawable/bg_text_input_layout"
+                app:boxStrokeWidth="@dimen/_1sdp"
+                app:boxStrokeWidthFocused="1dp"
+                app:endIconMode="custom"
+                app:endIconTint="@color/nobel"
+                app:expandedHintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvKodePromo"
+                app:placeholderText="@string/imput_kode_promo"
+                app:placeholderTextAppearance="@style/TextAppearance.Nunito.Regular.Body2"
+                app:placeholderTextColor="@color/mercury">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etKodePromo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLength="255"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/screen_margin"
+                android:text="@string/informasi_penerima"
+                android:textAppearance="@style/TextAppearance.Roboto.Bold.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kodePromo" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/screen_margin"
+                android:text="@string/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvInfo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/boxName"
+                style="@style/TextInputLayout.Login.Form.Outlined.Dense"
+                android:layout_width="@dimen/zero_margin"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:layout_marginBottom="@dimen/screen_margin"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                app:boxStrokeColor="@drawable/bg_text_input_layout"
+                app:boxStrokeWidth="@dimen/_1sdp"
+                app:boxStrokeWidthFocused="1dp"
+                app:endIconMode="custom"
+                app:endIconTint="@color/nobel"
+                app:expandedHintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                app:placeholderText="@string/input_name"
+                app:placeholderTextAppearance="@style/TextAppearance.Nunito.Regular.Body2"
+                app:placeholderTextColor="@color/mercury">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLength="255"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNohp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/screen_margin"
+                android:text="@string/hp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boxName" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/boxNoHp"
+                style="@style/TextInputLayout.Login.Form.Outlined.Dense"
+                android:layout_width="@dimen/zero_margin"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:layout_marginBottom="@dimen/screen_margin"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                app:boxStrokeColor="@drawable/bg_text_input_layout"
+                app:boxStrokeWidth="@dimen/_1sdp"
+                app:boxStrokeWidthFocused="1dp"
+                app:endIconMode="custom"
+                app:endIconTint="@color/nobel"
+                app:expandedHintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNohp"
+                app:placeholderText="@string/input_name"
+                app:placeholderTextAppearance="@style/TextAppearance.Nunito.Regular.Body2"
+                app:placeholderTextColor="@color/mercury">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLength="255"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDomisili"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:text="@string/domisili"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boxNoHp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDomisili"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/screen_margin"
+                android:background="@drawable/bg_input"
+                android:padding="@dimen/medium_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDomisili">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDoisili"
+                    android:layout_width="@dimen/zero_margin"
+                    android:layout_height="@dimen/zero_margin"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Caption"
+                    android:textColor="@color/dove_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/clDomisili"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/spinnerSortDomisili"
+                    android:layout_width="@dimen/zero_margin"
+                    android:layout_height="@dimen/_20sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/pesan"
+                android:textAllCaps="false"
+                app:iconGravity="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clDomisili" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

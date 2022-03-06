@@ -2,6 +2,7 @@ package com.efishery.test.ui.home
 
 import android.widget.ImageView
 import com.efishery.test.base.BaseAdapter
+import com.efishery.test.data.local.entity.Order
 import com.efishery.test.data.remote.model.AreaResponse
 import com.efishery.test.data.remote.model.BannerSliderModel
 import com.efishery.test.data.remote.model.ProductResponse
@@ -75,6 +76,21 @@ object HomeAdapter {
             ),
             diff = BaseAdapter.Diff(
                 areItemsTheSame = { old, new -> old.province == new.province },
+                areContentsTheSame = { old, new -> old == new }
+            )
+        )
+
+    val orderAdapter =
+        BaseAdapter.adapterOf<Order, ItemAreaBinding>(
+            register = BaseAdapter.Register(
+                onBindHolder = { pos, item, view ->
+                    view.run {
+                        tvArea.textOrNull = item.nama_penerima
+                    }
+                }
+            ),
+            diff = BaseAdapter.Diff(
+                areItemsTheSame = { old, new -> old.id == new.id },
                 areContentsTheSame = { old, new -> old == new }
             )
         )

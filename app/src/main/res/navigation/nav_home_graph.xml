@@ -66,9 +66,37 @@
             android:defaultValue="@null"
             app:argType="string"
             app:nullable="true" />
-
+        <action
+            android:id="@+id/action_detail_fragment_to_order_fragment"
+            app:destination="@id/order_fragment" />
 
     </fragment>
+
+    <dialog
+        android:id="@+id/order_fragment"
+        android:name="com.efishery.test.ui.order.OrderFragment"
+        android:label="Home"
+        tools:layout="@layout/layout_bottom_sheet_order">
+
+        <argument
+            android:name="nameFish"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="province"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="city"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+    </dialog>
 
 
 </navigation>

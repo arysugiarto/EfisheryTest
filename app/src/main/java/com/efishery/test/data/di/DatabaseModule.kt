@@ -25,7 +25,6 @@ object DatabaseModule {
 
     @Singleton
     @Provides
-    fun provideUserDao(database: EfisheryDatabase) = database.productDao()
+    fun provideOrderDao(database: EfisheryDatabase) = database.orderDao()
 
-    // Todo : Inject Dao Here
 }

@@ -47,17 +47,23 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         }
     }
 
-
     private fun initOnClick() {
         binding.apply {
-//            boxSearch.setOnClickListener(onClickCallback)
+            btnOrder.setOnClickListener(onClickCallback)
         }
     }
 
     private val onClickCallback = View.OnClickListener { view ->
         when (view) {
-//            binding.boxSearch -> {
-//            }
+            binding.btnOrder -> {
+                navController.navigateOrNull(
+                    DetailFragmentDirections.actionDetailFragmentToOrderFragment(
+                        args.nameFish,
+                        args.province,
+                        args.city
+                    )
+                )
+            }
         }
     }
 

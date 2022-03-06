@@ -20,7 +20,7 @@ object Const {
         const val DATABASE_NAME = "EFISHERY_DATABASE"
 
         object Table {
-            const val PRODUCT = "product_entity"
+            const val ORDER = "order_entity"
         }
     }
 

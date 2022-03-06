@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sort_pickup">
+        <item>Pilih serah terima</item>
+        <item>Ambil di kolam</item>
+        <item>Ambil diatas mobil</item>
+    </string-array>
+
+    <string-array name="kota">
+        <item>Pilih serah terima</item>
+        <item>Bandung</item>
+        <item>Jakarta</item>
+    </string-array>
+</resources>
