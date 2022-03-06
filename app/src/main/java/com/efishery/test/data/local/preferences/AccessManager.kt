@@ -52,16 +52,7 @@ class AccessManager(context: Context) {
                 preferences[accessKey] ?: emptyString
             }
 
-    val firstTime: Flow<Boolean> = dataStore.data
-        .catch { throwable ->
-            emit(emptyPreferences())
-            Timber.e(throwable)
-        }.map { preferences ->
-            preferences[firstTimeAccess] ?: emptyBoolean
-        }
 }
 
 const val TOKEN_ACCESS_REF = "token_access_key"
-const val FIRST_TIME_ACCESS = "first_time_access"
 private val accessKey = preferencesKey<String>(TOKEN_ACCESS_REF)
-private val firstTimeAccess = preferencesKey<Boolean>(FIRST_TIME_ACCESS)

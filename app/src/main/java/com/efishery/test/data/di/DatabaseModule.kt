@@ -21,7 +21,9 @@ object DatabaseModule {
             Room.databaseBuilder(
                 context,
                 EfisheryDatabase::class.java,
-                Const.Database.DATABASE_NAME).build()
+                Const.Database.DATABASE_NAME)
+                .fallbackToDestructiveMigration()
+                .build()
 
     @Singleton
     @Provides

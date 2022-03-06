@@ -1,4 +1,4 @@
-package com.efishery.test.ui.login
+package com.efishery.test.ui.splashscreen
 
 import android.os.Bundle
 import android.os.Handler
@@ -33,7 +33,7 @@ class SplashScreenFragment : Fragment(R.layout.fragment_splash_screen) {
             navController.navigateOrNull(
                 SplashScreenFragmentDirections.actionSplashFragmentToMainFragment()
             )
-        },2000)
+        },1000)
 
     }
 

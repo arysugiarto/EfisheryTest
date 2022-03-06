@@ -22,6 +22,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AlertDialog
@@ -671,4 +672,19 @@ private suspend fun ViewPager2.scrollIndefinitely(interval: Long) {
     setCurrentItem(nextItem, true)
 
     scrollIndefinitely(interval)
+}
+
+fun Context?.toast(
+    message: CharSequence?,
+    length: Int = Toast.LENGTH_SHORT
+) {
+    this?.let { context ->
+        Toast.makeText(context, message, length)?.apply {
+            with(view) {
+                findViewById<TextView>(android.R.id.message)?.apply {
+                    typeface = font(R.font.nunito_regular)
+                }
+            }
+        }?.show()
+    }
 }

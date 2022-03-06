@@ -37,9 +37,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/screen_margin"
                 android:layout_marginTop="@dimen/normal_margin"
-                android:textSize="@dimen/_10sdp"
                 android:text="@string/jumlah_pesanan_item"
                 android:textColor="@color/jungle_green"
+                android:textSize="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvKomoditas" />
 
@@ -62,8 +62,8 @@
                 android:layout_marginStart="@dimen/screen_margin"
                 android:layout_marginTop="@dimen/normal_margin"
                 android:text="@string/send_order"
-                android:textSize="@dimen/_10sdp"
                 android:textColor="@color/jungle_green"
+                android:textSize="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvJumlahPesanan" />
 
@@ -72,21 +72,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/screen_margin"
-                android:layout_marginTop="@dimen/normal_margin"
                 android:text="Jawa barat"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvKirimAlamat" />
+                app:layout_constraintBottom_toBottomOf="@+id/tvKirimAlamat"
+                app:layout_constraintStart_toEndOf="@+id/tvKirimAlamat"
+                app:layout_constraintTop_toTopOf="@+id/tvKirimAlamat" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/status"
                 android:layout_marginEnd="@dimen/screen_margin"
+                android:text="@string/status"
                 android:textColor="@color/jungle_green"
                 android:textSize="@dimen/_10sdp"
-                app:layout_constraintEnd_toStartOf="@+id/tvStatusValue"
                 app:layout_constraintBottom_toBottomOf="@+id/tvStatusValue"
+                app:layout_constraintEnd_toStartOf="@+id/tvStatusValue"
                 app:layout_constraintTop_toTopOf="@+id/tvStatusValue" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -95,10 +95,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/screen_margin"
                 android:layout_marginTop="@dimen/normal_margin"
-                android:text="Ambil di kolam"
-                android:textSize="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/screen_margin"
+                android:text="Ambil di kolam"
                 android:textAppearance="@style/TextAppearance.Roboto.Black.Body2"
+                android:textSize="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvAlamatPengirim" />
 

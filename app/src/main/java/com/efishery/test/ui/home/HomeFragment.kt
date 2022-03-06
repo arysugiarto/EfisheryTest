@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -32,12 +33,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private val productAdapter = HomeAdapter.productAdapter
     private var bannerSliderAdapter = HomeAdapter.bannerSliderAdapter
 
-    lateinit var searchView: SearchView
-    private var province = ArrayList<AreaResponse?>()
     private var listBanner = emptyList<BannerSliderModel>()
-    private var provId = emptyString
-
-    var keyword = emptyString
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -97,7 +93,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
             autoScroll(
                 lifecycleScope = viewLifecycleOwner.lifecycleScope,
-                interval = 4000L
+                interval = 3000L
             )
         }
     }
@@ -146,6 +142,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private fun initOnClick() {
         binding.apply {
             tvProvince.setOnClickListener(onClickCallback)
+            btnLogin.setOnClickListener(onClickCallback)
         }
     }
 
@@ -155,6 +152,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 navController.navigateOrNull(
                     HomeFragmentDirections.actionHomeFragmentToAreaFragment()
                 )
+            }
+            binding.btnLogin -> {
+                context?.toast(context?.getString(R.string.feature_on_going))
             }
         }
     }

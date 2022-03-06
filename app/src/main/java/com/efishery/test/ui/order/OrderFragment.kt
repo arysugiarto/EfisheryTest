@@ -25,6 +25,8 @@ import com.efishery.test.viewmodel.OrderViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
+import java.text.SimpleDateFormat
+import java.util.*
 
 @AndroidEntryPoint
 class OrderFragment : BottomSheetDialogFragment() {
@@ -32,6 +34,7 @@ class OrderFragment : BottomSheetDialogFragment() {
     private val binding by viewBinding<LayoutBottomSheetOrderBinding>()
     private val viewModel by hiltNavGraphViewModels<OrderViewModel>(R.id.home)
     private val args by navArgs<OrderFragmentArgs>()
+    private val date = SimpleDateFormat("dd/MM/yyyy", Locale.forLanguageTag("IN"))
 
     private val areaAdapter = HomeAdapter.areaAdapter
     private var area = Area()
@@ -121,9 +124,21 @@ class OrderFragment : BottomSheetDialogFragment() {
         binding.etFish.textOrNull = args.nameFish
     }
 
+    private fun datePicker(chosenDate: Long?) {
+        childFragmentManager.timePicker(
+            selection = chosenDate,
+            constraint = Pair(null, Date().time)
+        ) {
+            val format = date.format(Date(it))
+
+            binding.tvDateBirth.textOrNull = format
+        }
+    }
+
     private fun initOnClick() {
         binding.apply {
             btnOrder.setOnClickListener(onClickCallback)
+            clDateBirth.setOnClickListener(onClickCallback)
         }
     }
 
@@ -137,11 +152,13 @@ class OrderFragment : BottomSheetDialogFragment() {
                     kode_promo = binding.etKodePromo.text.toString(),
                     nama_penerima = binding.etName.text.toString(),
                     hp = binding.etPhone.text.toString(),
-                    domisili = domisli
+                    domisili = domisli,
+                    date = binding.tvDateBirth.text.toString()
                 )
                 viewModel.insertLocalOrder(order)
-//                dismiss()
+                dismiss()
             }
+            binding.clDateBirth -> datePicker(Date().time)
         }
     }
 

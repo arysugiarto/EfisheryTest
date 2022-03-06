@@ -2,19 +2,13 @@
 
     <!--Bottom Nav-->
     <string name="nav_menu_home">Beranda</string>
-    <string name="nav_menu_cart">Keranjang</string>
+    <string name="nav_menu_cart">Pesanan</string>
     <string name="nav_menu_profile">Akun</string>
     <string name="nav_menu_cd_home">Beranda</string>
-    <string name="nav_menu_cd_cart">Keranjang</string>
+    <string name="nav_menu_cd_cart">Pesanan</string>
     <string name="nav_menu_cd_profile">Akun</string>
 
-    <!--Register-->
-    <string name="register_password_weak">Kata Sandi Lemah</string>
-    <string name="register_password_medium">Kekuatan Kata sandi Sedang</string>
-    <string name="register_password_strong">Kata Sandi Kuat</string>
-    <string name="register_password_very_strong">Kata Sandi Sangat Kuat</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello, Saya Ary \n senang bisa mengerjakan test ini,\n jika banyak kurang semoga bisa di perbaiki ketika saya bisa bergabung dengan eFishery</string>
     <string name="search_hint">Mau cari ikan apa nih?</string>
     <string name="variant_fish">Jenis ikan</string>
     <string name="price">Harga</string>
@@ -41,8 +35,10 @@
     <string name="pesanan">Pesanan mu</string>
     <string name="pesananmu">Pesanan mu</string>
     <string name="jumlah_pesanan_item">Jumlah Pesanan :</string>
-    <string name="send_order">Dikirim dari</string>
+    <string name="send_order">Dikirim ke :</string>
     <string name="status">Status :</string>
     <string name="list_pesanan">Daftar Pesanan</string>
     <string name="enter_kode_promo">Masukan kode promo</string>
+    <string name="penarikan">Tanggal Penarikan</string>
+    <string name="feature_on_going">Fitur ini dalam pengembangan, ditunggu yaa..</string>
 </resources>

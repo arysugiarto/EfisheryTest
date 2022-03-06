@@ -14,5 +14,6 @@ data class Order(
     var kode_promo: String? = null,
     var nama_penerima: String? = null,
     var hp: String? = null,
-    var domisili: String? = null
+    var domisili: String? = null,
+    var date: String? = null
 )

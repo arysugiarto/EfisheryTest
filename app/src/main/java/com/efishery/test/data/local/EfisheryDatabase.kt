@@ -7,7 +7,7 @@ import com.efishery.test.data.local.entity.Order
 
 @Database(
     entities = [Order::class],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 abstract class EfisheryDatabase : RoomDatabase() {
