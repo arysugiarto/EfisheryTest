@@ -7,6 +7,7 @@ import androidx.datastore.preferences.emptyPreferences
 import androidx.datastore.preferences.preferencesKey
 import com.efishery.test.util.emptyString
 import com.efishery.test.util.Const
+import com.efishery.test.util.emptyBoolean
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
@@ -50,7 +51,17 @@ class AccessManager(context: Context) {
             }.map { preferences ->
                 preferences[accessKey] ?: emptyString
             }
+
+    val firstTime: Flow<Boolean> = dataStore.data
+        .catch { throwable ->
+            emit(emptyPreferences())
+            Timber.e(throwable)
+        }.map { preferences ->
+            preferences[firstTimeAccess] ?: emptyBoolean
+        }
 }
 
 const val TOKEN_ACCESS_REF = "token_access_key"
+const val FIRST_TIME_ACCESS = "first_time_access"
 private val accessKey = preferencesKey<String>(TOKEN_ACCESS_REF)
+private val firstTimeAccess = preferencesKey<Boolean>(FIRST_TIME_ACCESS)

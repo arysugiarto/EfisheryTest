@@ -38,4 +38,11 @@
     <string name="informasi_penerima">Informasi Penerima</string>
     <string name="title">Formulir Pemesanan</string>
     <string name="pesan">Pesan</string>
+    <string name="pesanan">Pesanan mu</string>
+    <string name="pesananmu">Pesanan mu</string>
+    <string name="jumlah_pesanan_item">Jumlah Pesanan :</string>
+    <string name="send_order">Dikirim dari</string>
+    <string name="status">Status :</string>
+    <string name="list_pesanan">Daftar Pesanan</string>
+    <string name="enter_kode_promo">Masukan kode promo</string>
 </resources>

@@ -3,15 +3,24 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/main_fragment"
+    app:startDestination="@id/splash_fragment"
     android:id="@+id/nav_main_graph">
-
-    <!--Todo : Add Splash, Auth Fragment & Main Fragment As Home, Cart & Profile Navigation-->
-
 
     <fragment
         android:id="@+id/main_fragment"
         android:name="com.efishery.test.ui.main.MainFragment"
         tools:layout="@layout/fragment_main"/>
+
+    <fragment
+        android:id="@+id/splash_fragment"
+        android:name="com.efishery.test.ui.login.SplashScreenFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_splash_screen">
+
+        <action
+            android:id="@+id/action_splash_fragment_to_main_fragment"
+            app:destination="@id/main_fragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
 
 </navigation>

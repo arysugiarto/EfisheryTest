@@ -44,36 +44,6 @@ object BuildType {
         const val appName = "Efhisery Test Dev"
     }
 
-//    object Staging {
-//        const val targetSdkVersion = 29
-//
-//        const val suffixId = ".staging"
-//        const val suffixName = "-staging"
-//
-//        const val baseUrlName = "BASE_URL"
-//        // Todo : Change Base URL Provider
-//        const val baseUrl = "\"https://panintiv1.staging.paninti.com/api/\""
-//
-//        const val appNameKey = "app_name"
-//        const val appName = "Parenting Hub Staging"
-//    }
-//
-//    object Production {
-//        const val compileSdkVersion = 29
-//        const val buildToolsVersion = "29.0.3"
-//        const val versionName = "1.0"
-//
-//        const val minSdkVersion = 21
-//        const val targetSdkVersion = 29
-//        const val versionCode = 1
-//
-//        const val baseUrlName = "BASE_URL"
-//        // Todo : Change Base URL Provider
-//        const val baseUrl = "\"https:/paninti.com/api/\""
-//
-//        const val appNameKey = "app_name"
-//        const val appName = "Parenting HUb"
-//    }
 }
 
 object ProGuard {

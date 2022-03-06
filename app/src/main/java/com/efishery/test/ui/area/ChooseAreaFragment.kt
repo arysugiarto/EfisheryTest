@@ -4,14 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.hilt.navigation.fragment.hiltNavGraphViewModels
 import com.efishery.test.R
 import com.efishery.test.data.remote.Result
 import com.efishery.test.data.remote.model.Area
 import com.efishery.test.databinding.LayoutBottomSheetAreaBinding
 import com.efishery.test.ui.home.HomeAdapter
-import com.efishery.test.ui.home.HomeFragmentDirections
 import com.efishery.test.util.navController
 import com.efishery.test.util.navigateOrNull
 import com.efishery.test.util.viewBinding

@@ -143,7 +143,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
     }
 
-
     private fun initOnClick() {
         binding.apply {
             tvProvince.setOnClickListener(onClickCallback)
@@ -159,5 +158,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
         }
     }
+
 
 }

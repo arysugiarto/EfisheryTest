@@ -7,8 +7,8 @@
 
     <fragment
         android:id="@+id/feed_fragment"
-        android:name="com.efishery.test.ui.feed.FeedFragment"
+        android:name="com.efishery.test.ui.order.OrderListFragment"
         android:label="Feed"
-        tools:layout="@layout/fragment_feed"/>
+        tools:layout="@layout/fragment_order"/>
 
 </navigation>

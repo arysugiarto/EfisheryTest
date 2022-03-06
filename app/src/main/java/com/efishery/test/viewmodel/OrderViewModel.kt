@@ -16,14 +16,12 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-
 @HiltViewModel
 class OrderViewModel @Inject constructor(
     application: Application,
    orderRepository: OrderRepository
 ) : BaseViewModel(application) {
     private val repository = orderRepository
-
 
     fun insertLocalOrder(order: Order) =
         viewModelScope.launch {

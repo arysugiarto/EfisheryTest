@@ -8,6 +8,7 @@ import com.efishery.test.data.remote.model.BannerSliderModel
 import com.efishery.test.data.remote.model.ProductResponse
 import com.efishery.test.databinding.ItemAreaBinding
 import com.efishery.test.databinding.ItemBannerSliderBinding
+import com.efishery.test.databinding.ItemOrderBinding
 import com.efishery.test.databinding.ItemProductBinding
 import com.efishery.test.util.ImageCornerOptions
 import com.efishery.test.util.loadImage
@@ -81,11 +82,14 @@ object HomeAdapter {
         )
 
     val orderAdapter =
-        BaseAdapter.adapterOf<Order, ItemAreaBinding>(
+        BaseAdapter.adapterOf<Order, ItemOrderBinding>(
             register = BaseAdapter.Register(
                 onBindHolder = { pos, item, view ->
                     view.run {
-                        tvArea.textOrNull = item.nama_penerima
+                        tvKomoditas.textOrNull = item.komoditas
+                        tvJumlahPesananValue.textOrNull = item.jumlah_pesanan + "Kg"
+                        tvStatusValue.textOrNull = item.pickup
+                        tvAlamatPengirim.textOrNull = item.domisili
                     }
                 }
             ),

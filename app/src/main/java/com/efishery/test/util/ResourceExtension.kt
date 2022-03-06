@@ -59,7 +59,6 @@ fun Context?.colorStateList(@ColorRes colorRes: Int) =
 fun Context?.dimen(@DimenRes dimenRes: Int) =
     this?.resources?.getDimension(dimenRes)
 
-// Todo @Bagus : Fix Return Invocation
 /*inline fun <reified T> Context.array(@ArrayRes arrayRes: Int): Array<T> = when(T::class) {
         Int::class -> resources.getIntArray(arrayRes)
         String::class -> resources.getStringArray(arrayRes)
