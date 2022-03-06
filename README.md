@@ -55,7 +55,7 @@ untuk melihat pesanan pengguna bisa klik bottom navigations pesanan yang ada di 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-Dan kesimpulannya untuk test ini ada beberapa fitur yang tak jalan <br>
+Dan kesimpulannya untuk test ini ada beberapa fitur yang belum selesai <br>
 
 Data yang telah tampil tidak akan hilang jika internet lost connect<br>
 Data aman jika device android melakukan rotate
