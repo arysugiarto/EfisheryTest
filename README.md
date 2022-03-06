@@ -5,4 +5,3 @@ Teknologi yang di pake
 -MVVm Patern
 -DI Hilt dagger
 -XMl MaterialsDesign menngunakan constraint layout
--
