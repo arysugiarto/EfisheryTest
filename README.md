@@ -2,10 +2,11 @@ Efishery Test Documentations
 
 Teknologi yang di pakai <br>
 -Kotlin <br>
--MVVm Patern <br>
+-MVVM Patern <br>
 -DI Hilt dagger <br>
 -XMl MaterialsDesign menngunakan constraint layout <br>
 -Menggunakan Single Activity pada jetpack navigations component
+-Room DB
 
 <br>
 <br>
@@ -48,11 +49,33 @@ Untuk memesan ikan tersebut pengguna bisa klik button pesan sekarang yang ada di
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 Pengguna harus mengisi formulir pemesanan jika formulir sudah terisi pengguna bisa klik pesan pada button di bawah (harus scroll karena form banyak)<br>
+
+untuk melihat pesanan pengguna bisa klik bottom navigations pesanan yang ada di bawah maka akan menuju halaman list pesanan <br>
 <img align="left" src="ss/5.png" width="200" height="400">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-untuk melihat pesanan pengguna bisa klik bottom navigations pesanan yang ada di bawah maka akan menuju halaman list pesanan <br>
-<img align="left" src="ss/6.png" width="200" height="400">
+
+Dan kesimpulannya untuk test ini ada beberapa fitur yang tak jalan <br>
+
+Data yang telah tampil tidak akan hilang jika internet lost connect<br>
+Data aman jika device android melakukan rotate
+
+menurut saya untuk fitur search dan tabulasi baiknya response API list ikan berisi body json <br>
+
+{
+    "search": "ikan nila",
+    "jenis_ikan": "Ikan Gurame"
+}
+
+<br>
+body json diatas memungkinkan untuk,  bisa mengirim param sesuai data yang ingin di cari atau di tampilkan<br>
+mungkin ada cara lain namun yang terikirkan oleh saya mungkin cara seperti diatas
+<br>
+
+untuk fitur tambah data, saya mengakalinya dengan input ke local data menggunakan Room DB,
+yang seolah-olah user memesan ke server, namun karena tidak ada API submit maka saya akali dengan Room DB
+
+
 
 
 
